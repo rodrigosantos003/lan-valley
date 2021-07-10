@@ -1,0 +1,82 @@
+C:\Users\Rodrigo.RODRIGO-LAPTOP\OneDrive\Documentos\Visual Studio 2019\Projects\LanValley\bin\Debug\LanValley.exe.config
+C:\Users\Rodrigo.RODRIGO-LAPTOP\OneDrive\Documentos\Visual Studio 2019\Projects\LanValley\bin\Debug\LanValley.exe
+C:\Users\Rodrigo.RODRIGO-LAPTOP\OneDrive\Documentos\Visual Studio 2019\Projects\LanValley\bin\Debug\LanValley.pdb
+C:\Users\Rodrigo.RODRIGO-LAPTOP\OneDrive\Documentos\Visual Studio 2019\Projects\LanValley\obj\Debug\LanValley.csprojAssemblyReference.cache
+C:\Users\Rodrigo.RODRIGO-LAPTOP\OneDrive\Documentos\Visual Studio 2019\Projects\LanValley\obj\Debug\LanValley.frmLogin.resources
+C:\Users\Rodrigo.RODRIGO-LAPTOP\OneDrive\Documentos\Visual Studio 2019\Projects\LanValley\obj\Debug\LanValley.Properties.Resources.resources
+C:\Users\Rodrigo.RODRIGO-LAPTOP\OneDrive\Documentos\Visual Studio 2019\Projects\LanValley\obj\Debug\LanValley.csproj.GenerateResource.cache
+C:\Users\Rodrigo.RODRIGO-LAPTOP\OneDrive\Documentos\Visual Studio 2019\Projects\LanValley\obj\Debug\LanValley.csproj.CoreCompileInputs.cache
+C:\Users\Rodrigo.RODRIGO-LAPTOP\OneDrive\Documentos\Visual Studio 2019\Projects\LanValley\obj\Debug\LanValley.exe
+C:\Users\Rodrigo.RODRIGO-LAPTOP\OneDrive\Documentos\Visual Studio 2019\Projects\LanValley\obj\Debug\LanValley.pdb
+C:\Users\Rodrigo.RODRIGO-LAPTOP\OneDrive\Documentos\Visual Studio 2019\Projects\LanValley\obj\Debug\LanValley.frmCriar.resources
+C:\Users\Rodrigo.RODRIGO-LAPTOP\OneDrive\Documentos\Visual Studio 2019\Projects\LanValley\obj\Debug\LanValley.frmSuporte.resources
+C:\Users\Rodrigo.RODRIGO-LAPTOP\OneDrive\Documentos\Visual Studio 2019\Projects\LanValley\obj\Debug\LanValley.frmAdmin.resources
+C:\Users\Rodrigo.RODRIGO-LAPTOP\OneDrive\Documentos\Visual Studio 2019\Projects\LanValley\obj\Debug\LanValley.frmUsers.resources
+C:\Users\Rodrigo.RODRIGO-LAPTOP\OneDrive\Documentos\Visual Studio 2019\Projects\LanValley\obj\Debug\LanValley.frmJogos.resources
+C:\Users\Rodrigo.RODRIGO-LAPTOP\OneDrive\Documentos\Visual Studio 2019\Projects\LanValley\obj\Debug\LanValley.frmLoadingScreen.resources
+C:\Users\Rodrigo.RODRIGO-LAPTOP\OneDrive\Documentos\Visual Studio 2019\Projects\LanValley\bin\Debug\BD_Sistema.mdf
+C:\Users\Rodrigo.RODRIGO-LAPTOP\OneDrive\Documentos\Visual Studio 2019\Projects\LanValley\bin\Debug\BD_Sistema_log.ldf
+C:\Users\Rodrigo Santos\Downloads\LanValley\bin\Debug\BD_Sistema.mdf
+C:\Users\Rodrigo Santos\Downloads\LanValley\bin\Debug\BD_Sistema_log.ldf
+C:\Users\Rodrigo Santos\Downloads\LanValley\bin\Debug\LanValley.exe.config
+C:\Users\Rodrigo Santos\Downloads\LanValley\bin\Debug\LanValley.exe
+C:\Users\Rodrigo Santos\Downloads\LanValley\bin\Debug\LanValley.pdb
+C:\Users\Rodrigo Santos\Downloads\LanValley\obj\Debug\LanValley.csprojAssemblyReference.cache
+C:\Users\Rodrigo Santos\Downloads\LanValley\obj\Debug\LanValley.frmAdmin.resources
+C:\Users\Rodrigo Santos\Downloads\LanValley\obj\Debug\LanValley.frmCriar.resources
+C:\Users\Rodrigo Santos\Downloads\LanValley\obj\Debug\LanValley.frmJogos.resources
+C:\Users\Rodrigo Santos\Downloads\LanValley\obj\Debug\LanValley.frmLoadingScreen.resources
+C:\Users\Rodrigo Santos\Downloads\LanValley\obj\Debug\LanValley.frmLogin.resources
+C:\Users\Rodrigo Santos\Downloads\LanValley\obj\Debug\LanValley.frmSuporte.resources
+C:\Users\Rodrigo Santos\Downloads\LanValley\obj\Debug\LanValley.frmUsers.resources
+C:\Users\Rodrigo Santos\Downloads\LanValley\obj\Debug\LanValley.Properties.Resources.resources
+C:\Users\Rodrigo Santos\Downloads\LanValley\obj\Debug\LanValley.csproj.GenerateResource.cache
+C:\Users\Rodrigo Santos\Downloads\LanValley\obj\Debug\LanValley.csproj.CoreCompileInputs.cache
+C:\Users\Rodrigo Santos\Downloads\LanValley\obj\Debug\LanValley.exe
+C:\Users\Rodrigo Santos\Downloads\LanValley\obj\Debug\LanValley.pdb
+C:\Users\filip\Desktop\LanValley\bin\Debug\BD_Sistema.mdf
+C:\Users\filip\Desktop\LanValley\bin\Debug\BD_Sistema_log.ldf
+C:\Users\filip\Desktop\LanValley\bin\Debug\LanValley.exe.config
+C:\Users\filip\Desktop\LanValley\bin\Debug\LanValley.exe
+C:\Users\filip\Desktop\LanValley\bin\Debug\LanValley.pdb
+C:\Users\filip\Desktop\LanValley\bin\Debug\CircularProgressBar.dll
+C:\Users\filip\Desktop\LanValley\bin\Debug\WinFormAnimation.dll
+C:\Users\filip\Desktop\LanValley\bin\Debug\CircularProgressBar.xml
+C:\Users\filip\Desktop\LanValley\obj\Debug\LanValley.csprojAssemblyReference.cache
+C:\Users\filip\Desktop\LanValley\obj\Debug\LanValley.frmAdmin.resources
+C:\Users\filip\Desktop\LanValley\obj\Debug\LanValley.frmContactingBD.resources
+C:\Users\filip\Desktop\LanValley\obj\Debug\LanValley.frmCriar.resources
+C:\Users\filip\Desktop\LanValley\obj\Debug\LanValley.frmJogos.resources
+C:\Users\filip\Desktop\LanValley\obj\Debug\LanValley.frmLoadingScreen.resources
+C:\Users\filip\Desktop\LanValley\obj\Debug\LanValley.frmLogin.resources
+C:\Users\filip\Desktop\LanValley\obj\Debug\LanValley.frmSuporte.resources
+C:\Users\filip\Desktop\LanValley\obj\Debug\LanValley.frmUsers.resources
+C:\Users\filip\Desktop\LanValley\obj\Debug\LanValley.Properties.Resources.resources
+C:\Users\filip\Desktop\LanValley\obj\Debug\LanValley.csproj.GenerateResource.cache
+C:\Users\filip\Desktop\LanValley\obj\Debug\LanValley.csproj.CoreCompileInputs.cache
+C:\Users\filip\Desktop\LanValley\obj\Debug\LanValley.csproj.CopyComplete
+C:\Users\filip\Desktop\LanValley\obj\Debug\LanValley.exe
+C:\Users\filip\Desktop\LanValley\obj\Debug\LanValley.pdb
+C:\Coding\C#\LanValley\bin\Debug\BD_Sistema.mdf
+C:\Coding\C#\LanValley\bin\Debug\BD_Sistema_log.ldf
+C:\Coding\C#\LanValley\bin\Debug\LanValley.exe.config
+C:\Coding\C#\LanValley\bin\Debug\LanValley.exe
+C:\Coding\C#\LanValley\bin\Debug\LanValley.pdb
+C:\Coding\C#\LanValley\bin\Debug\CircularProgressBar.dll
+C:\Coding\C#\LanValley\bin\Debug\WinFormAnimation.dll
+C:\Coding\C#\LanValley\bin\Debug\CircularProgressBar.xml
+C:\Coding\C#\LanValley\obj\Debug\LanValley.csproj.AssemblyReference.cache
+C:\Coding\C#\LanValley\obj\Debug\LanValley.frmAdmin.resources
+C:\Coding\C#\LanValley\obj\Debug\LanValley.frmContactingBD.resources
+C:\Coding\C#\LanValley\obj\Debug\LanValley.frmCriar.resources
+C:\Coding\C#\LanValley\obj\Debug\LanValley.frmJogos.resources
+C:\Coding\C#\LanValley\obj\Debug\LanValley.frmLoadingScreen.resources
+C:\Coding\C#\LanValley\obj\Debug\LanValley.frmLogin.resources
+C:\Coding\C#\LanValley\obj\Debug\LanValley.frmSuporte.resources
+C:\Coding\C#\LanValley\obj\Debug\LanValley.frmUsers.resources
+C:\Coding\C#\LanValley\obj\Debug\LanValley.Properties.Resources.resources
+C:\Coding\C#\LanValley\obj\Debug\LanValley.csproj.GenerateResource.cache
+C:\Coding\C#\LanValley\obj\Debug\LanValley.csproj.CoreCompileInputs.cache
+C:\Coding\C#\LanValley\obj\Debug\LanValley.csproj.CopyComplete
+C:\Coding\C#\LanValley\obj\Debug\LanValley.exe
+C:\Coding\C#\LanValley\obj\Debug\LanValley.pdb
