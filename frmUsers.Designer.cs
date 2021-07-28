@@ -137,6 +137,7 @@ namespace LanValley
             // 
             // timeCounter
             // 
+            this.timeCounter.Enabled = true;
             this.timeCounter.Interval = 60000;
             this.timeCounter.Tick += new System.EventHandler(this.timeCounter_Tick);
             // 

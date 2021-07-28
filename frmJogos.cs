@@ -29,7 +29,7 @@ namespace LanValley
         private void frmJogos_Load(object sender, EventArgs e)
         {
             sqlcon = new SqlConnection(cs);
-            adapter = new SqlDataAdapter("SELECT * FROM tbl_Jogos", sqlcon);
+            adapter = new SqlDataAdapter("SELECT * FROM tbl_Games", sqlcon);
             dtbl = new DataTable();
             adapter.Fill(dtbl);
             dgv_Jogos.DataSource = dtbl;

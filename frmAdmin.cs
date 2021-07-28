@@ -78,7 +78,7 @@ namespace LanValley
         private void showMovimentos()
         {
             sqlcon = new SqlConnection(cs);
-            adapter = new SqlDataAdapter("SELECT * FROM tbl_Movimentos", sqlcon);
+            adapter = new SqlDataAdapter("SELECT * FROM tbl_Transactions", sqlcon);
             dtbl = new DataTable();
             adapter.Fill(dtbl);
             dgv_Movimentos.DataSource = dtbl;
@@ -89,17 +89,17 @@ namespace LanValley
         {
             if (dgv_Movimentos.Rows.Count > 0)
             {
-                SaveFileDialog exportMovements = new SaveFileDialog();
-                exportMovements.Filter = "CSV (*.csv)|*.csv";
-                exportMovements.FileName = "Movimentos.csv";
+                SaveFileDialog exportTransactions = new SaveFileDialog();
+                exportTransactions.Filter = "CSV (*.csv)|*.csv";
+                exportTransactions.FileName = "Movimentos.csv";
                 bool fileError = false;
-                if (exportMovements.ShowDialog() == DialogResult.OK)
+                if (exportTransactions.ShowDialog() == DialogResult.OK)
                 {
-                    if (File.Exists(exportMovements.FileName))
+                    if (File.Exists(exportTransactions.FileName))
                     {
                         try
                         {
-                            File.Delete(exportMovements.FileName);
+                            File.Delete(exportTransactions.FileName);
                         }
                         catch (IOException ex)
                         {
@@ -128,7 +128,7 @@ namespace LanValley
                                 }
                             }
 
-                            File.WriteAllLines(exportMovements.FileName, outputCsv, Encoding.UTF8);
+                            File.WriteAllLines(exportTransactions.FileName, outputCsv, Encoding.UTF8);
                             MessageBox.Show("Dados exportados com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         catch (Exception ex)
@@ -140,7 +140,7 @@ namespace LanValley
             }
             else
             {
-                MessageBox.Show("No Record To Export !!!", "Info");
+                MessageBox.Show("Não há registos para exportar!", "Informação");
             }
         }
 
@@ -148,7 +148,7 @@ namespace LanValley
         private void showJogos()
         {
             sqlcon = new SqlConnection(cs);
-            adapter = new SqlDataAdapter("SELECT * FROM tbl_Jogos", sqlcon);
+            adapter = new SqlDataAdapter("SELECT * FROM tbl_Games", sqlcon);
             dtbl = new DataTable();
             adapter.Fill(dtbl);
             dgv_Jogos.DataSource = dtbl;
@@ -389,7 +389,7 @@ namespace LanValley
                 new frmContactingBD().ShowDialog();
 
                 sqlcon = new SqlConnection(cs);
-                cmd = new SqlCommand("INSERT INTO [tbl_Jogos] ([Nome], [EXE]) VALUES (@Nome, @Exe)", sqlcon);
+                cmd = new SqlCommand("INSERT INTO [tbl_Games] ([Nome], [EXE]) VALUES (@Nome, @Exe)", sqlcon);
                 sqlcon.Open();
                 cmd.Parameters.AddWithValue("@Nome", txt_gameName.Text);
                 cmd.Parameters.AddWithValue("@Exe", txt_exeName.Text);

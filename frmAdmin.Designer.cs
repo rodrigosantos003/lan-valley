@@ -370,7 +370,7 @@ namespace LanValley
             this.lbl_totalPC.BackColor = System.Drawing.Color.Transparent;
             this.lbl_totalPC.Font = new System.Drawing.Font("ROG Fonts", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_totalPC.ForeColor = System.Drawing.Color.Red;
-            this.lbl_totalPC.Location = new System.Drawing.Point(138, 130);
+            this.lbl_totalPC.Location = new System.Drawing.Point(138, 132);
             this.lbl_totalPC.Name = "lbl_totalPC";
             this.lbl_totalPC.Size = new System.Drawing.Size(40, 34);
             this.lbl_totalPC.TabIndex = 22;

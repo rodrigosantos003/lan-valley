@@ -96,6 +96,7 @@ namespace LanValley
             // 
             // dgv_Jogos
             // 
+            this.dgv_Jogos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_Jogos.BackgroundColor = System.Drawing.Color.White;
             this.dgv_Jogos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Jogos.Dock = System.Windows.Forms.DockStyle.Left;
