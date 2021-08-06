@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.IO;
@@ -10,7 +11,7 @@ namespace LanValley
     public partial class frmAdmin : Form
     {
         #region DB Connection
-        string cs = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + Path.GetFullPath(@"../..") + "\\BD_Sistema.mdf;Integrated Security=True;Connect Timeout=30";
+        string cs = ConfigurationManager.ConnectionStrings["BD_Sistema"].ConnectionString;
         SqlConnection sqlcon;
         SqlCommand cmd, checkUser;
         SqlDataAdapter adapter;
@@ -140,7 +141,7 @@ namespace LanValley
             }
             else
             {
-                MessageBox.Show("Não há registos para exportar!", "Informação");
+                MessageBox.Show("Não há registos para exportar", "Informação");
             }
         }
 
@@ -190,7 +191,7 @@ namespace LanValley
                 int userExists = (int)checkUser.ExecuteScalar();
 
                 if (userExists > 0)
-                    MessageBox.Show("Este utilizador já existe!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Este utilizador já existe", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 else
                 {
@@ -201,11 +202,11 @@ namespace LanValley
                     cmd.ExecuteNonQuery();
                     sqlcon.Close();
 
-                    MessageBox.Show("User introduzido com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("User introduzido com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     //write action in logs file
                     StringBuilder stringBuilder = new StringBuilder();
-                    stringBuilder.Append("User Criado: " + txt_User.Text + "\t" + DateTime.Now.ToString() + "\n");
+                    stringBuilder.Append("User Criado: " + txt_User.Text + "\t" + DateTime.UtcNow.ToString() + "\n");
                     File.AppendAllText(AppDomain.CurrentDomain.BaseDirectory + @"\" + "logs.txt", stringBuilder.ToString());
                 }
 
@@ -237,11 +238,11 @@ namespace LanValley
                 cmd.ExecuteNonQuery();
                 sqlcon.Close();
 
-                MessageBox.Show("User atualizado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("User atualizado com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 //write action in logs file
                 StringBuilder stringBuilder = new StringBuilder();
-                stringBuilder.Append("User Modificado: " + txt_User.Text + "\t" + DateTime.Now.ToString() + "\n");
+                stringBuilder.Append("User Modificado: " + txt_User.Text + "\t" + DateTime.UtcNow.ToString() + "\n");
                 File.AppendAllText(AppDomain.CurrentDomain.BaseDirectory + @"\" + "logs.txt", stringBuilder.ToString());
 
                 showUsers();
@@ -251,7 +252,7 @@ namespace LanValley
                 txt_Pass.Clear();
             }
             else
-                MessageBox.Show("Selecione um utilizador para atualizar!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Selecione um utilizador para atualizar", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         //button click event -> delete users from BD
@@ -270,10 +271,10 @@ namespace LanValley
                     cmd.ExecuteNonQuery();
                     sqlcon.Close();
 
-                    MessageBox.Show("User eliminado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("User eliminado com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     StringBuilder stringBuilder = new StringBuilder();
-                    stringBuilder.Append("User Eliminado: " + txt_User.Text + "\t" + DateTime.Now.ToString() + "\n");
+                    stringBuilder.Append("User Eliminado: " + txt_User.Text + "\t" + DateTime.UtcNow.ToString() + "\n");
                     File.AppendAllText(AppDomain.CurrentDomain.BaseDirectory + @"\" + "logs.txt", stringBuilder.ToString());
 
                     showUsers();
@@ -291,7 +292,7 @@ namespace LanValley
                 }
             }
             else
-                MessageBox.Show("Selecione um utilizador para eliminar!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Selecione um utilizador para eliminar", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         //get values when a row is selected on datagridview
@@ -321,7 +322,7 @@ namespace LanValley
 
                 //write action in logs file
                 StringBuilder stringBuilder = new StringBuilder();
-                stringBuilder.Append("PC Inserido: " + txt_Marca.Text + " " + txt_Modelo.Text + "\t" + DateTime.Now.ToString() + "\n");
+                stringBuilder.Append("PC Inserido: " + txt_Marca.Text + " " + txt_Modelo.Text + "\t" + DateTime.UtcNow.ToString() + "\n");
                 File.AppendAllText(AppDomain.CurrentDomain.BaseDirectory + @"\" + "logs.txt", stringBuilder.ToString());
 
                 showPC();
@@ -331,7 +332,7 @@ namespace LanValley
                 txt_Modelo.Clear();
             }
             else
-                MessageBox.Show("Preencha os campos necessários!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Preencha os campos necessários", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         //button click event -> delete PC from BD
@@ -351,11 +352,11 @@ namespace LanValley
                     cmd.ExecuteNonQuery();
                     sqlcon.Close();
 
-                    MessageBox.Show("PC eliminado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("PC eliminado com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     //write action on BD
                     StringBuilder stringBuilder = new StringBuilder();
-                    stringBuilder.Append("PC Eliminado: " + txt_Marca.Text + " " + txt_Modelo.Text + "\t" + DateTime.Now.ToString() + "\n");
+                    stringBuilder.Append("PC Eliminado: " + txt_Marca.Text + " " + txt_Modelo.Text + "\t" + DateTime.UtcNow.ToString() + "\n");
                     File.AppendAllText(AppDomain.CurrentDomain.BaseDirectory + @"\" + "logs.txt", stringBuilder.ToString());
 
                     showPC();
@@ -371,7 +372,7 @@ namespace LanValley
                 }
             }
             else
-                MessageBox.Show("Selecione um PC para eliminar!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Selecione um PC para eliminar", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         //button click event -> search game exe file
@@ -396,7 +397,7 @@ namespace LanValley
                 cmd.ExecuteNonQuery();
                 sqlcon.Close();
 
-                MessageBox.Show("Jogo adicionado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Jogo adicionado com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 showJogos();
 
@@ -404,7 +405,7 @@ namespace LanValley
                 txt_exeName.Clear();
             }
             else
-                MessageBox.Show("Preencha os campos necessários!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Preencha os campos necessários", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         //tool strip button click event -> lock current usage session

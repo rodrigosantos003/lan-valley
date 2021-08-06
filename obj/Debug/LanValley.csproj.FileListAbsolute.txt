@@ -124,4 +124,3 @@ C:\Coding\C#\lan_valley\obj\Debug\LanValley.csproj.CoreCompileInputs.cache
 C:\Coding\C#\lan_valley\obj\Debug\LanValley.csproj.CopyComplete
 C:\Coding\C#\lan_valley\obj\Debug\LanValley.exe
 C:\Coding\C#\lan_valley\obj\Debug\LanValley.pdb
-C:\Coding\C#\lan_valley\obj\Debug\LanValley.csproj.AssemblyReference.cache

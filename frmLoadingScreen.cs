@@ -26,7 +26,7 @@ namespace LanValley
             Label lbl = new Label();
             Controls.Add(lbl);
             lbl.Name = "lbl_Version";
-            lbl.Text = "Versao 1.0.0";
+            lbl.Text = "Versao 2.0.0";
             lbl.Font = new Font("ROG Fonts", 14);
             lbl.AutoSize = true;
             lbl.Location = new Point(467, 370);

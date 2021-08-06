@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Configuration;
 using System.Data.SqlClient;
 using System.IO;
 using System.Text;
@@ -18,7 +19,7 @@ namespace LanValley
         {
             if (txt_insertName.Text != "" && txt_insertUser.Text != "" && txt_insertUser.Text != "")
             {
-                string cs = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + Path.GetFullPath(@"../..") + "\\BD_Sistema.mdf;Integrated Security=True;Connect Timeout=30";
+                string cs = ConfigurationManager.ConnectionStrings["BD_Sistema"].ConnectionString; ;
 
                 new frmContactingBD().ShowDialog();
 
@@ -30,7 +31,7 @@ namespace LanValley
                 int userExists = (int)checkUser.ExecuteScalar();
 
                 if (userExists > 0)
-                    MessageBox.Show("Este username já existe!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Este username já existe", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 else
                 {
@@ -40,11 +41,11 @@ namespace LanValley
                     cmd.Parameters.AddWithValue("@Dinheiro", 0.00);
                     cmd.ExecuteNonQuery();
 
-                    MessageBox.Show("Conta criada com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Conta criada com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     //write action on logs file
                     StringBuilder stringBuilder = new StringBuilder();
-                    stringBuilder.Append("User Criado: " + txt_insertUser.Text + "\t" + DateTime.Now.ToString() + "\n");
+                    stringBuilder.Append("User Criado: " + txt_insertUser.Text + "\t" + DateTime.UtcNow.ToString() + "\n");
                     File.AppendAllText(AppDomain.CurrentDomain.BaseDirectory + @"\" + "logs.txt", stringBuilder.ToString());
 
                     sqlcon.Close();
@@ -56,7 +57,7 @@ namespace LanValley
                 }
             }
             else
-                MessageBox.Show("Introduza as informações necessárias!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Introduza as informações necessárias", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         //button click event -> execute create account function

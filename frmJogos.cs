@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Diagnostics;
@@ -11,7 +12,7 @@ namespace LanValley
     public partial class frmJogos : Form
     {
         #region DB Connection
-        string cs = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + Path.GetFullPath(@"../..") + "\\BD_Sistema.mdf;Integrated Security=True;Connect Timeout=30";
+        string cs = ConfigurationManager.ConnectionStrings["BD_Sistema"].ConnectionString;
         SqlConnection sqlcon;
         SqlDataAdapter adapter;
         DataTable dtbl;
@@ -56,16 +57,16 @@ namespace LanValley
 
                     //write action on BD
                     StringBuilder stringBuilder = new StringBuilder();
-                    stringBuilder.Append("Ação User: " + frmUsers.setUserName + "Jogou " + lbl_gameName.Text + "\t" + DateTime.Now.ToString() + "\n");
+                    stringBuilder.Append("Ação User: " + frmUsers.setUserName + "Jogou " + lbl_gameName.Text + "\t" + DateTime.UtcNow.ToString() + "\n");
                     File.AppendAllText(AppDomain.CurrentDomain.BaseDirectory + @"\" + "logs.txt", stringBuilder.ToString());
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message + "\nO jogo selecionado não está instalado!", "Ocurreu um Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(ex.Message + "\nO jogo selecionado não está instalado", "Ocurreu um Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
-                MessageBox.Show("Seleciona um jogo!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Seleciona um jogo", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         //button click event -> open default browser with google page

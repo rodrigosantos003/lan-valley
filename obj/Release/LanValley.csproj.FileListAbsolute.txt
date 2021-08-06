@@ -20,4 +20,3 @@ C:\Coding\C#\lan_valley\obj\Release\LanValley.csproj.CoreCompileInputs.cache
 C:\Coding\C#\lan_valley\obj\Release\LanValley.csproj.CopyComplete
 C:\Coding\C#\lan_valley\obj\Release\LanValley.exe
 C:\Coding\C#\lan_valley\obj\Release\LanValley.pdb
-C:\Coding\C#\lan_valley\obj\Release\LanValley.csproj.AssemblyReference.cache

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.IO;
@@ -21,7 +22,7 @@ namespace LanValley
         {
             if (txt_User.Text != "" && txt_Pass.Text != "")
             {
-                string cs = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + Path.GetFullPath(@"../..") + "\\BD_Sistema.mdf;Integrated Security=True;Connect Timeout=30";
+                string cs = ConfigurationManager.ConnectionStrings["BD_Sistema"].ConnectionString;
 
                 SqlConnection sqlcon = new SqlConnection(cs);
                 SqlDataAdapter adapter = new SqlDataAdapter("SELECT * FROM tbl_Accounts WHERE Username = '" + txt_User.Text.Trim() + "' AND Password = '" + txt_Pass.Text.Trim() + "'", sqlcon);
@@ -54,19 +55,19 @@ namespace LanValley
 
                     //write action in logs file
                     StringBuilder stringBuilder = new StringBuilder();
-                    stringBuilder.Append("Login: " + user + "\t" + DateTime.Now.ToString() + "\n");
+                    stringBuilder.Append("Login: " + user + "\t" + DateTime.UtcNow.ToString() + "\n");
                     File.AppendAllText(AppDomain.CurrentDomain.BaseDirectory + @"\" + "logs.txt", stringBuilder.ToString());
                 }
                 else
                 {
-                    MessageBox.Show("Introduza as informações corretas!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Introduza as informações corretas", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
                     txt_User.Clear();
                     txt_Pass.Clear();
                 }
             }
             else
-                MessageBox.Show("Introduza as informações necessárias!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Introduza as informações necessárias", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         private void txt_Pass_KeyPress(object sender, KeyPressEventArgs e)

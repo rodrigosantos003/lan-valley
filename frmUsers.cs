@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Configuration;
 using System.Data.SqlClient;
 using System.IO;
 using System.Text;
@@ -9,7 +10,7 @@ namespace LanValley
     public partial class frmUsers : Form
     {
         #region DBConnection
-        string cs = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + Path.GetFullPath(@"../..") + "\\BD_Sistema.mdf;Integrated Security=True;Connect Timeout=30";
+        string cs = ConfigurationManager.ConnectionStrings["BD_Sistema"].ConnectionString;
         SqlConnection sqlcon;
         SqlCommand cmd;
         #endregion
@@ -61,11 +62,11 @@ namespace LanValley
                     cmd.ExecuteNonQuery();
                     sqlcon.Close();
 
-                    MessageBox.Show("Dinheiro depositado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Dinheiro depositado com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     //write action in logs file
                     StringBuilder stringBuilder = new StringBuilder();
-                    stringBuilder.Append("Ação User: " + lbl_User.Text + " depositou dinheiro" + "\t" + DateTime.Now.ToString() + "\n");
+                    stringBuilder.Append("Ação User: " + lbl_User.Text + " depositou dinheiro" + "\t" + DateTime.UtcNow.ToString() + "\n");
                     File.AppendAllText(AppDomain.CurrentDomain.BaseDirectory + @"\" + "logs.txt", stringBuilder.ToString());
 
                     insertDeposit();
@@ -80,7 +81,7 @@ namespace LanValley
                 }
             }
             else
-                MessageBox.Show("Introduza um montante!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Introduza um montante", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
             txt_Montante.Clear();
         }
@@ -102,7 +103,7 @@ namespace LanValley
         {
             if (lbl_Number.Text == "0.00")
             {
-                MessageBox.Show("Deposite dinheiro na sua conta para continuar!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Deposite dinheiro na sua conta para continuar", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -176,7 +177,7 @@ namespace LanValley
                 Hide();
             }
             else
-                MessageBox.Show("Deposite dinheiro na sua conta para continuar!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Deposite dinheiro na sua conta para continuar", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         //tool strip button click event -> lock current usage session
